@@ -121,14 +121,20 @@ button[disabled] {
 /* Base Form Styling */
 fieldset {
   text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
 }
 
 fieldset > div {
   margin-top: 1em;
 }
 
+p,
 input {
   margin: 0;
+  font-size: 1rem;
 }
 
 #form-error {
@@ -146,6 +152,7 @@ input {
 #characters {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #characters > div {
@@ -154,10 +161,11 @@ input {
 
 #show-hide {
   display: flex;
+  justify-content: flex-start;
 }
 
 #show-hide > div {
-  width: 8rem;
+  flex: 0 0 5rem;
 }
 
 
@@ -195,13 +203,21 @@ input.invalid {
     font-size: 1rem;
   }
 
-  #characters > div:nth-child(2n) {
-    flex: 1 0 55%;
+  #characters > div {
+    flex: 1 0 50%;
   }
 }
 
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+  }
+
+  #password-length {
+    flex-direction: column;
+  }
+
+  #characters > div {
+    flex: 1 0 100%;
   }
 }
