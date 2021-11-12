@@ -1,6 +1,42 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword(length, characters) {
+  // randomly select from list of allowable characters up to a limit.
+  // get length from user input between (and including) 8 and 128
+  length = length || 8;
+
+  // get selections from lowercase, uppercase, numeric, and/or special characters
+  characters = characters || { lower: true, upper: true, numbers: true, special: true };
+  
+  // password output string to be returned
+  let output = ""
+
+  // concatenate the string of optional characters from user input
+  let options = "";
+  if (characters.lower) {
+    options += lower;
+  }
+  if (characters.upper) {
+    options += upper;
+  }
+  if (characters.numbers) {
+    options += numbers;
+  }
+  if (characters.special) {
+    options += special;
+  }
+
+  // build up the password based on the user's selected length
+  for (var i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * options.length);
+
+    output += options[randomIndex];
+  }
+  
+  return output;
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
