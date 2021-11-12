@@ -123,12 +123,41 @@ fieldset {
   text-align: left;
 }
 
+fieldset > div {
+  margin-top: 1em;
+}
+
 input {
   margin: 0;
 }
 
 #form-error {
   visibility: hidden;
+}
+
+#password-length {
+  display: flex;
+}
+
+#password-length > *{
+  width: 8rem;
+}
+
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#characters > div {
+  flex: 0 1 8rem;
+}
+
+#show-hide {
+  display: flex;
+}
+
+#show-hide > div {
+  width: 8rem;
 }
 
 
@@ -164,6 +193,10 @@ input.invalid {
 
   #password {
     font-size: 1rem;
+  }
+
+  #characters > div:nth-child(2n) {
+    flex: 1 0 55%;
   }
 }
 

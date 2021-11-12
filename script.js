@@ -56,3 +56,5 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // TODO: Add validation event listener to form
+
+// TODO: Click textarea id password to copy contents to clipboard
