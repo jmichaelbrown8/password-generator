@@ -118,6 +118,43 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Base Form Styling */
+fieldset {
+  text-align: left;
+}
+
+input {
+  margin: 0;
+}
+
+#form-error {
+  visibility: hidden;
+}
+
+
+/* Invalid Form Styles */
+fieldset.invalid {
+  border-color: red;
+}
+
+fieldset.invalid #form-error {
+  visibility: visible;
+}
+
+fieldset.invalid legend {
+  color: red;
+}
+
+label.invalid {
+  color: red;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+/* Media Queries */
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
