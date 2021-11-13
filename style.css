@@ -118,6 +118,78 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Base Form Styling */
+fieldset {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+fieldset > div {
+  margin-top: 1em;
+}
+
+p,
+input {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#form-error {
+  visibility: hidden;
+}
+
+#password-length {
+  display: flex;
+}
+
+#password-length > *{
+  width: 8rem;
+}
+
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#characters > div {
+  flex: 0 1 8rem;
+}
+
+#show-hide {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#show-hide > div {
+  flex: 0 0 5rem;
+}
+
+
+/* Invalid Form Styles */
+fieldset.invalid {
+  border-color: red;
+}
+
+fieldset.invalid #form-error {
+  visibility: visible;
+}
+
+fieldset.invalid legend {
+  color: red;
+}
+
+label.invalid {
+  color: red;
+}
+
+input.invalid {
+  border-color: red;
+}
+
 /* Media Queries */
 
 @media (max-width: 690px) {
@@ -130,10 +202,22 @@ button[disabled] {
   #password {
     font-size: 1rem;
   }
+
+  #characters > div {
+    flex: 1 0 50%;
+  }
 }
 
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+  }
+
+  #password-length {
+    flex-direction: column;
+  }
+
+  #characters > div {
+    flex: 1 0 100%;
   }
 }
