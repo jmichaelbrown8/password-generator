@@ -1,4 +1,4 @@
-# password-generator
+# 🔐 password-generator
 
 A simple password generator.
 
