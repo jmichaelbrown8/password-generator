@@ -45,7 +45,38 @@ function generatePassword(length, characters) {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  
+  // ask for length
+  var length;
+  do {
+    let answer = window.prompt("Choose a length for your password (between 8 and 128 characters long)");
+    // it's possible the user cancels out of the prompt--we should let them.
+    if (answer === null) {
+      break;
+    }
+    length = parseInt(answer);
+  } while (!length || length < 8 || length > 128)
+  
+  if (!length) {
+    return;
+  }
+
+  // ask for each character type (must include at least one)
+  var characters = {};
+
+  do {
+    characters.lower = window.confirm("Include lowercase letters?");
+    characters.upper = window.confirm("Include uppercase letters?");
+    characters.numbers = window.confirm("Include numbers?");
+    characters.special = window.confirm("Include special characters?");
+    
+    if (!characters.lower && !characters.upper && !characters.numbers && !characters.special) {
+      alert("You must select one character type (lowercase, uppercase, numbers, or specials)");
+    }
+
+  } while (!characters.lower && !characters.upper && !characters.numbers && !characters.special)
+  
+  var password = generatePassword(length, characters);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
