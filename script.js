@@ -49,17 +49,8 @@ function writePassword() {
   // ask for length
   var length;
   do {
-    let answer = window.prompt("Choose a length for your password (between 8 and 128 characters long)");
-    // it's possible the user cancels out of the prompt--we should let them.
-    if (answer === null) {
-      break;
-    }
-    length = parseInt(answer);
+    length = parseInt(window.prompt("Choose a length for your password\n(Any number between 8 and 128)", "8"), 10);
   } while (!length || length < 8 || length > 128)
-  
-  if (!length) {
-    return;
-  }
 
   // ask for each character type (must include at least one)
   var characters = {};
