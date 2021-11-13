@@ -39,7 +39,7 @@ const special = [
     "~"
 ].join(''); // converts this array to a string
 
-const lowerRegex = '[a-z]';
-const upperRegex = '[A-Z]';
-const numbersRegex = '[0-9]';
-const specialRegex = '[^A-Za-z0-9_]';
+const lowerRegex = /[a-z]/;
+const upperRegex = /[A-Z]/;
+const numbersRegex = /[0-9]/;
+const specialRegex = /[^A-Za-z0-9_]/;

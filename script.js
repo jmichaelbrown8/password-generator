@@ -29,12 +29,19 @@ function generatePassword(length, characters) {
     output += options[randomIndex];
   }
   
-  // TODO: recurse until this meets all of the user's character selections
+  // recurse until this meets all of the user's character selections
+  if (!(
+    characters.lower === lowerRegex.test(output) &&
+    characters.upper === upperRegex.test(output) &&
+    characters.numbers === numbersRegex.test(output) &&
+    characters.special === specialRegex.test(output)
+  )) {
+    console.log('no match', output);
+    return generatePassword(length, characters);
+  }
 
   return output;
 }
-
-// TODO: Validate password meets options
 
 // Prompt user for inputs, then call the generate function and write password to the #password text area
 function writePassword() {
