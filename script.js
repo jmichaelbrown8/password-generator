@@ -3,11 +3,6 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(length, characters) {
   // randomly select from list of allowable characters up to a limit.
-  // get length from user input between (and including) 8 and 128, defaulting to 8
-  length = length || 8;
-
-  // get selections from lowercase, uppercase, numeric, and/or special characters, defaulting to all types
-  characters = characters || { lower: true, upper: true, numbers: true, special: true };
   
   // password output string to be returned
   let output = ""
@@ -39,11 +34,9 @@ function generatePassword(length, characters) {
   return output;
 }
 
-// TODO: Validate options selected on page (and style appropriately if not)
-
 // TODO: Validate password meets options
 
-// Write password to the #password input
+// Prompt user for inputs, then call the generate function and write password to the #password text area
 function writePassword() {
   
   // ask for length
@@ -76,7 +69,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// TODO: Add validation event listener to form
-
-// TODO: Click textarea id password to copy contents to clipboard
