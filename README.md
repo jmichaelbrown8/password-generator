@@ -21,8 +21,8 @@ This is a random password generator browser application for making secure passwo
 * Do...While loops to ensure the correct user input
 * Regular Expressions for testing that the random selection meets the user's preferences
 * Recursion until the user's preferences have been met with the random generator
+* Form inputs
 
 ## Known Issues / Future Enhancements
 * No automated tests. [issue #4](https://github.com/jmichaelbrown8/password-generator/issues/4)
-* Window prompts, confirms, and alerts aren't the best user experience. [issue #2](https://github.com/jmichaelbrown8/password-generator/issues/2)
 * Click the password to auto-select and copy the contents to your clipboard. [issue #3](https://github.com/jmichaelbrown8/password-generator/issues/3)
