@@ -27,54 +27,6 @@
         </div>
 
         <div class="card-footer">
-          <fieldset>
-            <legend>Options</legend>
-            <!-- TODO: Display validation message here -->
-            <p id="form-msg">Select the options for generating your password.</p>
-            <!-- Length Input -->
-            <div id="password-length">
-              <label for="length">Length (8-128)</label>
-              <input type="number" name="Length" id="length" min="8" max="128" value="8">
-            </div>
-    
-            <!-- Characters Multi-checkbox -->
-            <div id="characters">
-              <div>
-                <input type="checkbox" name="lower" id="lower" checked>
-                <label for="lower" >Lowercase</label>
-              </div>
-              
-              <div>
-                <input type="checkbox" name="upper" id="upper">
-                <label for="upper">Uppercase</label>
-              </div>
-              
-              <div>
-                <input type="checkbox" name="numbers" id="numbers">
-                <label for="numbers">Numbers</label>
-              </div>
-              
-              <div>
-                <input type="checkbox" name="special" id="special">
-                <label for="special">Special</label>
-              </div>
-            </div>
-    
-            <!-- Show/Hide Radio Buttons-->
-            <div id="show-hide">
-              <div>
-                <input type="radio" name="show_hide" id="show" checked>
-                <label for="show">Show</label>
-              </div>
-              <div>
-                <input type="radio" name="show_hide" id="hide">
-                <label for="hide">Hide</label>
-              </div>
-            </div>
-
-            <!-- Generate Password Button -->
-          </fieldset>
-
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
