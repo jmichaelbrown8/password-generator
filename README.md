@@ -1,6 +1,6 @@
 # 🔐 password-generator
 
-A simple password generator.
+A simple random password generator, deployed using github pages: [jmichaelbrown8.github.io/password-generator](https://jmichaelbrown8.github.io/password-generator/)
 
 ## Technologies Used
 * JavaScript
