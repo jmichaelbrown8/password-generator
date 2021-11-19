@@ -2,7 +2,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(length, characters) {
   // randomly select from list of allowable characters up to a limit.
-  
+
   // password output string to be returned
   let output = ""
 
@@ -27,14 +27,14 @@ function generatePassword(length, characters) {
 
     output += options[randomIndex];
   }
-  
+
   // recurse until this meets all of the user's character selections
   if (!(
-    characters.lower === lowerRegex.test(output) &&
-    characters.upper === upperRegex.test(output) &&
-    characters.numbers === numbersRegex.test(output) &&
-    characters.special === specialRegex.test(output)
-  )) {
+      characters.lower === lowerRegex.test(output) &&
+      characters.upper === upperRegex.test(output) &&
+      characters.numbers === numbersRegex.test(output) &&
+      characters.special === specialRegex.test(output)
+    )) {
     console.log('no match', output);
     return generatePassword(length, characters);
   }
@@ -44,7 +44,7 @@ function generatePassword(length, characters) {
 
 // Prompt user for inputs, then call the generate function and write password to the #password text area
 function writePassword() {
-  
+
   // ask for length
   var length;
   do {
@@ -59,13 +59,13 @@ function writePassword() {
     characters.upper = window.confirm("Include uppercase letters?");
     characters.numbers = window.confirm("Include numbers?");
     characters.special = window.confirm("Include special characters?");
-    
+
     if (!characters.lower && !characters.upper && !characters.numbers && !characters.special) {
       alert("You must select one character type (lowercase, uppercase, numbers, or specials)");
     }
 
   } while (!characters.lower && !characters.upper && !characters.numbers && !characters.special)
-  
+
   var password = generatePassword(length, characters);
   var passwordText = document.querySelector("#password");
 
