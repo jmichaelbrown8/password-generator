@@ -16,6 +16,12 @@ This is a random password generator browser application for making secure passwo
 * Clone the repo
 * Run the index.html in your browser
 
+## Deployment
+
+This app is deployed using the GitHub pages feature: [https://jmichaelbrown8.github.io/password-generator/](https://jmichaelbrown8.github.io/password-generator/)
+
+<img src="./password-generator.gif" alt="Screenshot of the deployed app" />
+
 ## Notable patterns used
 * Constants for character types and regex patterns
 * Do...While loops to ensure the correct user input
